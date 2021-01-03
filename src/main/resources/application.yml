@@ -1,0 +1,26 @@
+---
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  output.ansi.enabled: ALWAYS
+  mail:
+    host: ${env.MAIL_HOST}
+    port: ${env.MAIL_PORT}
+    username: ${env.MAIL_USERNAME}
+    password: ${env.MAIL_PASSWORD}
+    properties.mail.smtp:
+      #starttls.enable: true
+      #starttls.required: true
+      auth: true
+      connectiontimeout: 5000
+      timeout: 5000
+      writetimeout: 5000
+server:
+  port: 9000
+  error:
+    path: /error
+    whitelabel.enabled: false
+---
