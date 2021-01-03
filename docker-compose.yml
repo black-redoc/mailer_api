@@ -1,12 +1,3 @@
-mailerdb:
-  container_name: mailerdb
-  image: postgres:9
-  ports:
-    - 5432:5432
-  environment:
-    POSTGRES_DB: mailerdb
-    POSTGRES_USER: admin
-    POSTGRES_PASSWORD: p4ssword
 cache:
   container_name: redis
   image: redis
