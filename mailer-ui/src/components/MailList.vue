@@ -47,7 +47,6 @@ export default {
       return content.length > 80 ? content.substring(0, 80) + "..." : content;
     },
     updateMessages(msg) {
-      console.log("aqui");
       const email = JSON.parse(msg.body);
       this.appendEmails({ ...email });
       this.alertMessage = "Haz recibido un nuevo email";
